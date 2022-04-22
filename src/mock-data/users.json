@@ -1,0 +1,11 @@
+[
+	{
+		"firstName": "John",
+		"lastName": "Doe",
+		"email": "john@doe.co",
+		"password": "john@doe",
+		"role": "USER",
+		"isDeleted": false,
+		"isVerified": true
+	}
+]
