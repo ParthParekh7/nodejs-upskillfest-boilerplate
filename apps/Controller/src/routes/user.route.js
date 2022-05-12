@@ -5,3 +5,4 @@ import { userController } from '../controllers';
 export default express
 	.Router()
 	.get('/', userController.getAllUsers)
+	.post('/', userController.createUser);
