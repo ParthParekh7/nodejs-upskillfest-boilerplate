@@ -47,9 +47,4 @@ const findOneAndUpdateQuery = async (update, id) => {
 	return result;
 };
 
-const create = async (userData) => {
-	const newUser = new userModel(userData);
-	return await newUser.save();
-}
-
-export default { findAllQuery, userQuery, findOneAndUpdateQuery, create };
+export default { findAllQuery, userQuery, findOneAndUpdateQuery };
