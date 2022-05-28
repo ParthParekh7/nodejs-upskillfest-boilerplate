@@ -4,4 +4,14 @@ import { userController } from '../controllers';
 
 export default express
 	.Router()
-	.get('/', userController.getAllUsers)
+	/**
+	 * @swagger
+	 * /api/v1/users:
+	 *   get:
+	 *     description: Get all Users
+	 *     responses:
+	 *       200:
+	 *         description: Success
+	 *
+	 */
+	.get('/', userController.getAllUsers);

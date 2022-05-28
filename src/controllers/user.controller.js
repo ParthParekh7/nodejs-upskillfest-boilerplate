@@ -1,6 +1,6 @@
-import { userService } from '../services';
+// import { userService } from '../services';
 import { errorLogger, hashPassword } from '../utils';
-import { userModel } from '../models';
+// import { userModel } from '../models';
 
 import users from '../mock-data/users.json';
 const getAllUsers = async (req, res) => {

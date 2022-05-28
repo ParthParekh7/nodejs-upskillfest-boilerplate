@@ -3,6 +3,11 @@ import cors from 'cors';
 import morgan from 'morgan';
 import helmet from 'helmet';
 import compression from 'compression';
+import swaggerUI from 'swagger-ui-express';
+import YAML from 'yamljs';
+
+const swaggerDocs = YAML.load('./src/swagger/api-docs.yaml');
+
 import { userRoute } from './src/routes';
 
 /* Initialize Express Server */
@@ -34,6 +39,20 @@ server.use(compression());
 
 /* Routes */
 server.use('/api/v1/users', userRoute);
+
+//Swagger Configuration
+/* const swaggerOptions = {
+	swaggerDefinition: {
+		info: {
+			title: process.env.PROJECT_NAME,
+			version: '1.0.0',
+		},
+	},
+	apis: ['src/routes/user.route.js'],
+};
+const swaggerDocs = swaggerJSDoc(swaggerOptions); */
+
+server.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 
 /* Server Start Listening on PORT */
 server.listen(PORT, () => {

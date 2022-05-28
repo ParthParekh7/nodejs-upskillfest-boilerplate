@@ -1,6 +1,7 @@
 # NodeJS - Starter | Intermediate | Advanced Boilerplate
 
 ## Folder Structure
+
 ```
 ├── src
 │   ├── config
@@ -36,21 +37,23 @@
 ├── LICENCE
 ├── package.json
 ├── README.md
-├── server.js 
+├── server.js
 ```
 
-### Steps Run Project 
+### Steps Run Project
 
 1. npm install or yarn
 2. Set environment variables from `src/config/.env-example` into `src/config/.env`
+
 ```
 NODE_ENV=development
-PROJECT_NAME='nodejs-starter'
+PROJECT_NAME='nodejs-upskillfest-boilerplate'
 DB_ENV=dev
 PORT=5000
 LOG_PATH=logs
 HOST=localhost
 CONNECTION_URL=mongodb://localhost:27017/
-DATABASE_NAME=nodejs-starter
+DATABASE_NAME=nodejs-upskillfest-boilerplate
 ```
+
 3. Execute command `npm run start:server` or `yarn start:server`
