@@ -54,7 +54,7 @@ const swaggerDocs = swaggerJSDoc(swaggerOptions); */
 
 server.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 
-/* Server Start Listening on PORT */
+/*** Server Start Listening on PORT ***/
 server.listen(PORT, () => {
 	console.info('API Running at');
 	console.info(`${'\tLocalhost:'} ${BASE_API_URL}`);
