@@ -1,0 +1,12 @@
+{
+	"web": {
+		"client_id": "148447485377-go68bo4rib1n3sinmbkp17mbuf5cffn6.apps.googleusercontent.com",
+		"project_id": "signinwithgoggle-352403",
+		"auth_uri": "https://accounts.google.com/o/oauth2/auth",
+		"token_uri": "https://oauth2.googleapis.com/token",
+		"auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+		"client_secret": "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",
+		"redirect_uris": ["http://localhost:5000/auth/google/callback"],
+		"javascript_origins": ["http://localhost:5000"]
+	}
+}

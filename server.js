@@ -5,10 +5,8 @@ import helmet from 'helmet';
 import compression from 'compression';
 import swaggerUI from 'swagger-ui-express';
 import YAML from 'yamljs';
-
 const swaggerDocs = YAML.load('./src/swagger/api-docs.yaml');
-
-import { userRoute } from './src/routes';
+import { userRoute, homePage, productRoute } from './src/routes';
 
 /* Initialize Express Server */
 const server = express();
@@ -26,8 +24,9 @@ const BASE_API_URL = `http://${HOST}:${PORT}${'/api/v1'}`;
 /** Middlewares */
 
 // Parse Req.body
-server.use(json());
+server.use(express.json());
 server.use(urlencoded({ extended: true }));
+
 // CORS
 server.use(cors({ origin: true, credentials: true }));
 // API LOG
@@ -38,6 +37,8 @@ server.use(helmet());
 server.use(compression());
 
 /* Routes */
+server.use('/', homePage);
+server.use('/products', productRoute);
 server.use('/api/v1/users', userRoute);
 
 //Swagger Configuration
